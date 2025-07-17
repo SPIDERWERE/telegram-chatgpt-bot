@@ -55,7 +55,13 @@ def reply_all(message):
         bot.reply_to(message, 
             "▶️ Subscribe to our YouTube channel:\nhttps://www.youtube.com/@PathsalaVidyapith"
         )
-    
+        import os
+     if __name__ == "__main__":
+        bot.remove_webhook()
+        bot.set_webhook(url='https://your-app-name.onrender.com/')
+        port = int(os.environ.get("PORT", 5000))  # Render দিয়া পোর্ট নিবে
+        app.run(host="0.0.0.0", port=port)
+
 
 # ▶️ Run the bot
 print("✅ Bot is running...")
